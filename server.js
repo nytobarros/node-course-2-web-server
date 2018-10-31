@@ -46,6 +46,15 @@ app.get('/about', (req, res) => {
     pageTitle: 'About Page',
   });
 });
+
+app.get('/project', (req, res) => {
+  // res.send('<h3>About Page!</h3>');
+  res.render('projects.hbs', {
+    pageTitle: 'Our Portfolio',
+  });
+});
+
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to fullfil request!'
